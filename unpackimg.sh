@@ -13,7 +13,7 @@ case $1 in
   --nosudo) nosudo=1; shift;;
   --sudo) shift;;
 esac;
-if [ ! "$nosudo" ]; then
+if [ ! "$nosudo" ] && [ ! $(uname -o) = 'Cygwin' ]; then
   sudo=sudo; sumsg=" (as root)";
 fi;
 
@@ -24,6 +24,14 @@ case $(uname -s) in
   ;;
   *) plat="linux";;
 esac;
+# Add by affggh for cygwin changed
+case $(uname -o) in
+  Cygwin)
+    plat="cygwin"
+  ;;
+  *) plat="linux";;
+esac;
+
 arch=$plat/`uname -m`;
 
 aik="${BASH_SOURCE:-$0}";
@@ -43,7 +51,7 @@ case $plat in
     truncate() { DYLD_LIBRARY_PATH="$bin/$arch" "$bin/$arch/truncate" "$@"; }
     xz() { DYLD_LIBRARY_PATH="$bin/$arch" "$bin/$arch/xz" "$@"; }
   ;;
-  linux)
+  linux|cygwin)
     cpio=cpio;
     [ "$(cpio --version | head -n1 | rev | cut -d\  -f1 | rev)" = "2.13" ] && cpiowarning=1;
     statarg="-c %U";

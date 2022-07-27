@@ -1,0 +1,42 @@
+[submodule "external/mkbootimg"]
+	path = external/mkbootimg
+	url = https://github.com/osm0sis/mkbootimg
+[submodule "external/pxa-mkbootimg"]
+	path = external/pxa-mkbootimg
+	url = https://github.com/osm0sis/pxa-mkbootimg
+[submodule "external/elftool"]
+	path = external/elftool
+	url = https://github.com/osm0sis/elftool
+[submodule "external/unpackelf"]
+	path = external/unpackelf
+	url = https://github.com/osm0sis/unpackelf
+[submodule "external/mboot"]
+	path = external/mboot
+	url = https://github.com/osm0sis/mboot
+[submodule "external/mkmtkhdr"]
+	path = external/mkmtkhdr
+	url = https://github.com/osm0sis/mkmtkhdr
+[submodule "external/loki"]
+	path = external/loki
+	url = https://github.com/djrbliss/loki
+[submodule "external/futility"]
+	path = external/futility
+	url = https://github.com/osm0sis/futility
+[submodule "external/BlobTools"]
+	path = external/BlobTools
+	url = https://github.com/AndroidRoot/BlobTools
+[submodule "external/dhtbsign"]
+	path = external/dhtbsign
+	url = https://github.com/osm0sis/dhtbsign
+[submodule "external/rkflashtool"]
+	path = external/rkflashtool
+	url = https://github.com/neo-technologies/rkflashtool
+[submodule "external/anyxperia_dumper"]
+	path = external/anyxperia_dumper
+	url = https://github.com/munjeni/anyxperia_dumper
+[submodule "external/lz4"]
+	path = external/lz4
+	url = https://github.com/lz4/lz4
+[submodule "external/openssl"]
+	path = external/openssl
+	url = https://github.com/openssl/openssl
